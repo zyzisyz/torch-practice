@@ -16,12 +16,9 @@ from torchvision import datasets, transforms
 # load the train and test fashion mnist dataset
 def dataloader(batch_size):
 
-	kwargs = {'num_workers': 1, 'pin_memory': True}
+	kwargs = {'num_workers': 2, 'pin_memory': True}
 
-	transform=transforms.Compose([
-		transforms.ToTensor(),
-		transforms.Normalize((0.1307,), (0.3081,))
-		])
+	transform=transforms.Compose([transforms.ToTensor()])
 
 	mnist_train = datasets.FashionMNIST('./data/fashion-mnist', train=True, download=True, transform=transform)
 	train_loader = DataLoader(mnist_train, batch_size=batch_size, shuffle=True, **kwargs)
