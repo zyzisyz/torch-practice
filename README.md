@@ -1,2 +1,4 @@
 # torch-practice
-pytorch practice
+
+Pytorch practice on fashion-mnist dataset and mnist dataset
+
