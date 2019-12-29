@@ -132,3 +132,7 @@ dmypy.json
 .data/
 *MNIST*
 *mnist*
+*.pth
+*.npz
+*.npy
+*.pt
